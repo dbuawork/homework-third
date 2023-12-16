@@ -25,19 +25,49 @@
 # else:
 #     print("введене число не є днем тижня")
 #
-# #
-num1 = int(input("Перше число: "))
+# # #
+# num1 = int(input("Перше число: "))
+#
+# num2 = int(input("Друге число: "))
+#
+# if num1 != num2 and num1 < num2:
+#
+#    print(str(num1) + " " + str(num2))
+#
+# elif num1 != num2 and num1 > num2:
+#
+#    print(str(num2) + " " + str(num1))
+#
+# else:
+#
+#    print("num1 = num2")
+print(f"Введіть 1 та 2 число, та оберіть варіант математичної операції")
 
-num2 = int(input("Друге число: "))
+num1 = int(input("Введіть перше число: "))
+num2 = int(input("Введіть друге число: "))
 
-if num1 != num2 and num1 < num2:
+try:
+     print("1. Додавання\n2. Віднімання\n3. Множення\n4. Ділення\n5. Вихід")
+     user_select = int(input("Яку математичну операцію виконуемо?: "))
 
-   print(str(num1) + " " + str(num2))
-
-elif num1 != num2 and num1 > num2:
-
-   print(str(num2) + " " + str(num1))
-
-else:
-
-   print("num1 = num2")
+     if user_select == 1:
+         print(num1 + num2)
+     elif user_select == 2:
+         print(num1 - num2)
+     elif user_select == 3:
+         print(num1 * num2)
+     elif user_select == 4:
+         print(num1 / num2)
+except ZeroDivisionError as error:
+         print(f"ZeroDivisionError occurred: {error}")
+except ValueError as error:
+         print("Enter only integer numbers please!")
+         print(f"ValueError: {error}")
+except Exception as error:  # Exception -> базовий тип виключення пишемо останнім з except
+         print(f"Exception occurred: {error}")
+     elif user_select == 5:
+         print("Вихід")
+     else:
+         print("Такого пункту нажаль немае(")
+except Exception as e:
+        print(f"Error: {e}")
