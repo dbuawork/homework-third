@@ -26,10 +26,18 @@
 #     print("введене число не є днем тижня")
 #
 # #
-try:
+num1 = int(input("Перше число: "))
 
-    print("Введіть 2 числа")
+num2 = int(input("Друге число: "))
 
-    n1 = int(input(f"Перше число: "))
-    n2 = int(input(f"Друге число: "))
+if a != b and a < b:
 
+   print(str(a) + " " + str(b))
+
+elif a != b and a > b:
+
+   print(str(b) + " " + str(a))
+
+else:
+
+   print("a = b")
