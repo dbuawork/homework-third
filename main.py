@@ -30,14 +30,14 @@ num1 = int(input("Перше число: "))
 
 num2 = int(input("Друге число: "))
 
-if a != b and a < b:
+if num1 != num2 and num1 < num2:
 
-   print(str(a) + " " + str(b))
+   print(str(num1) + " " + str(num2))
 
-elif a != b and a > b:
+elif num1 != num2 and num1 > num2:
 
-   print(str(b) + " " + str(a))
+   print(str(num2) + " " + str(num1))
 
 else:
 
-   print("a = b")
+   print("num1 = num2")
