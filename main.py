@@ -58,16 +58,18 @@ try:
          print(num1 * num2)
      elif user_select == 4:
          print(num1 / num2)
-except ZeroDivisionError as error:
-         print(f"ZeroDivisionError occurred: {error}")
-except ValueError as error:
-         print("Enter only integer numbers please!")
-         print(f"ValueError: {error}")
-except Exception as error:  # Exception -> базовий тип виключення пишемо останнім з except
-         print(f"Exception occurred: {error}")
      elif user_select == 5:
          print("Вихід")
      else:
          print("Такого пункту нажаль немае(")
 except Exception as e:
         print(f"Error: {e}")
+except ZeroDivisionError as error:
+        print(f"ZeroDivisionError occurred: {error}")
+except ValueError as error:
+    print("Введіть тільки цілі числа, будь ласка!")
+    print(f"ValueError: {error}")
+except Exception as error:
+    print(f"Exception occurred: {error}")
+finally:
+    print("Вихід...")
